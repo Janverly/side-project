@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fortune Cookie</title>
+    <link rel="stylesheet" href="kapalaran_mo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+    <body>
+
+        <h2>Fortune Cookie..?</h2>
+        <p>Direction: Close your eyes then point at this page. Open yp=our eyes and follow the advice your mouse pointer lands on.</p>
+
+        <div id="game">
+            <img src="img/cookie.png" data-alt-src="img/fortune17.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune3.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune25.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune9.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune14.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune1.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune30.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune6.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune22.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune11.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune27.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune4.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune18.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune8.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune21.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune2.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune29.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune13.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune7.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune19.jpg">
+            <img src="img/cookie.png" data-alt-src="img/fortune24.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune5.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune16.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune10.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune28.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune12.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune23.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune20.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune26.png">
+            <img src="img/cookie.png" data-alt-src="img/fortune15.png">
+        </div>
+
+        <script>
+
+        $(document).ready(function(){
+            $("#game img").hover(
+                function() { 
+                    const $img = $(this);
+                    const altSrc = $img.attr("data-alt-src");
+                    $img.attr("src", altSrc);
+                },
+                function() { 
+                    const $img = $(this);
+                    $img.attr("src", "img/cookie.png");
+                }
+            );
+        });
+        </script>
+
+    </body>
+</html>

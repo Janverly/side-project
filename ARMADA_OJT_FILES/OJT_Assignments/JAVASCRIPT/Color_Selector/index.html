@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.4s ease; /* transition*/
+        }
+
+        .color-box {
+            width: 100px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+        .green { background-color: green; }
+    </style>
+</head>
+<body>
+
+    <h1>Color Selector</h1>
+    <p>Click a color to change the background.</p>
+
+    <div id="container">
+        <button class="color-box red" data-color="red">Red</button>
+        <button class="color-box blue" data-color="blue">Blue</button>
+        <button class="color-box green" data-color="green">Green</button>
+    </div>
+
+<script>
+    document.getElementById("container").addEventListener("click", function() {
+        // Reset background when container is clicked
+        this.style.backgroundColor = "lightgray"; 
+    });
+
+    document.querySelectorAll(".color-box").forEach(button => {
+        button.addEventListener("click", function(event) {
+
+            // Prevent button click from triggering container click
+            event.stopPropagation(); 
+
+            // Get color sa css
+            const color = getComputedStyle(this).backgroundColor;
+
+            document.getElementById("container").style.backgroundColor = color;
+        });
+    });
+</script>
+
+
+</body>
+</html>
+
+
+
+<!-- 
+
+ using event.stopPropagation() so that when I click a button, 
+it doesn’t trigger the container’s click event. Without 
+it, the click on the button would bubble up and make the container 
+think it was clicked too. This way, the button click only does what 
+I want, and the container click only happens when I actually click 
+the container.
+
+-->

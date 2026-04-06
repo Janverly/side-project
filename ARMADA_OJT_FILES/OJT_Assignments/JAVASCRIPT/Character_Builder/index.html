@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Character Builder</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #1a1a2e;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      margin: 0;
+    }
+    h1 { font-size: 2rem; color: #e2b96f; margin-bottom: 5px; }
+    p.subtitle { color: #aaa; margin-bottom: 30px; font-size: 0.95rem; }
+    .app { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+    .armor-slots { display: flex; flex-direction: column; gap: 20px; }
+    .slot { background: #16213e; border: 1px solid #2a2a5a; border-radius: 10px; padding: 15px; width: 260px; }
+    .slot h3 { color: #e2b96f; margin: 0 0 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .options { display: flex; gap: 10px; flex-wrap: wrap; }
+    .options img { width: 55px; height: 55px; border-radius: 8px; border: 2px solid transparent; cursor: pointer; background: #0f3460; padding: 4px; transition: border-color 0.2s, transform 0.2s; object-fit: contain; }
+    .options img.selected { border-color: #e2b96f; transform: scale(1.1); }
+    .options img:hover { border-color: #e2b96f88; }
+    .preview { background: #16213e; border: 1px solid #2a2a5a; border-radius: 10px; padding: 25px; width: 220px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .preview h2 { color: #e2b96f; font-size: 1.1rem; margin: 0; }
+    .character { position: relative; width: 120px; height: 200px; margin: 10px 0; }
+    .character img { position: absolute; top: 0; left: 0; width: 120px; height: 200px; object-fit: contain; }
+    .selection-info { width: 100%; font-size: 0.85rem; color: #ccc; }
+    .selection-info p { margin: 4px 0; background: #0f3460; padding: 5px 10px; border-radius: 6px; }
+    .selection-info span { color: #e2b96f; font-weight: bold; }
+    .save-btn { margin-top: 10px; background: #e2b96f; color: #1a1a2e; border: none; padding: 10px 25px; border-radius: 8px; font-size: 1rem; font-family: Georgia, serif; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+    .save-btn:hover { background: #f0cd8a; }
+    .save-msg { font-size: 0.85rem; color: #7bed9f; min-height: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>⚔️ Character Builder</h1>
+  <p class="subtitle">Click on an armor piece to equip it on your character.</p>
+
+  <div class="app">
+
+    <div class="armor-slots">
+      <div class="slot">
+        <h3>🪖 Helmet</h3>
+        <div class="options" id="helmet-options"></div>
+      </div>
+      <div class="slot">
+        <h3>👖 Leggings</h3>
+        <div class="options" id="leggings-options"></div>
+      </div>
+      <div class="slot">
+        <h3>👢 Boots</h3>
+        <div class="options" id="boots-options"></div>
+      </div>
+    </div>
+
+    <div class="preview">
+      <h2>Your Character</h2>
+      <div class="character">
+        <!-- Base body — place your image at img/body.png -->
+        <img src="img/body.png" id="base-body" alt="Base Body" />
+        <!-- Armor layers — hidden until selected -->
+        <img src="" id="preview-helmet"   alt="Helmet"   style="display:none;" />
+        <img src="" id="preview-leggings" alt="Leggings" style="display:none;" />
+        <img src="" id="preview-boots"    alt="Boots"    style="display:none;" />
+      </div>
+
+      <div class="selection-info">
+        <p>Helmet: <span id="info-helmet">None</span></p>
+        <p>Leggings: <span id="info-leggings">None</span></p>
+        <p>Boots: <span id="info-boots">None</span></p>
+      </div>
+
+      <button class="save-btn" onclick="saveCharacter()">💾 Save Build</button>
+      <p class="save-msg" id="save-msg"></p>
+    </div>
+
+  </div>
+
+  <script>
+
+    // ============================================================
+    // YOUR IMAGE FOLDER STRUCTURE:
+    //
+    // img/
+    //   body.png          -- the base character body
+    //   helmet_1.png      -- Iron Helm
+    //   helmet_2.png      -- Gold Helm
+    //   helmet_3.png      -- Shadow Helm
+    //   leggings_1.png    -- Iron Legs
+    //   leggings_2.png    -- Gold Legs
+    //   leggings_3.png    -- Shadow Legs
+    //   boots_1.png       -- Iron Boots
+    //   boots_2.png       -- Gold Boots
+    //   boots_3.png       -- Shadow Boots
+    // ============================================================
+
+    // STEP 1: Define armor data
+    // name = display name, img = path to the image file
+
+    var helmets = [
+      { name: "Iron Helm",   img: "img/iron_helmet.png" },
+      { name: "Gold Helm",   img: "img/helmet_2.png" },
+      { name: "Shadow Helm", img: "img/helmet_3.png" },
+    ];
+
+    var leggings = [
+      { name: "Iron Legs",   img: "img/iron_leggings.png" },
+      { name: "Gold Legs",   img: "img/leggings_2.png" },
+      { name: "Shadow Legs", img: "img/leggings_3.png" },
+    ];
+
+    var boots = [
+      { name: "Iron Boots",   img: "img/boots_1.png" },
+      { name: "Gold Boots",   img: "img/boots_2.png" },
+      { name: "Shadow Boots", img: "img/boots_3.png" },
+    ];
+
+    // STEP 2: Track what is currently selected
+    var selected = {
+      helmet: null,
+      leggings: null,
+      boots: null,
+    };
+
+    // STEP 3: Build the option buttons from the data above
+    function buildOptions(armorList, slotId, slotName) {
+      var container = document.getElementById(slotId);
+      for (var i = 0; i < armorList.length; i++) {
+        var armor = armorList[i];
+        var img = document.createElement("img");
+        img.src = armor.img;
+        img.alt = armor.name;
+        img.dataset.name = armor.name;
+        img.dataset.img  = armor.img;
+        img.dataset.slot = slotName;
+        img.onclick = function() { selectArmor(this); };
+        container.appendChild(img);
+      }
+    }
+
+    // STEP 4: Handle armor selection when user clicks an image
+    function selectArmor(clickedImg) {
+      var slot      = clickedImg.dataset.slot;
+      var armorName = clickedImg.dataset.name;
+      var armorImg  = clickedImg.dataset.img;
+
+      // Remove selected highlight from all images in this slot
+      var allImages = clickedImg.parentElement.querySelectorAll("img");
+      for (var i = 0; i < allImages.length; i++) {
+        allImages[i].classList.remove("selected");
+      }
+
+      // Highlight the clicked image
+      clickedImg.classList.add("selected");
+
+      // Save the selection
+      selected[slot] = armorName;
+
+      // Update the character preview layer
+      var previewImg = document.getElementById("preview-" + slot);
+      previewImg.src = armorImg;
+      previewImg.style.display = "block";
+
+      // Update the info text
+      document.getElementById("info-" + slot).textContent = armorName;
+
+      // Clear save message
+      document.getElementById("save-msg").textContent = "";
+    }
+
+    // STEP 5: Save the character build
+    function saveCharacter() {
+      if (selected.helmet === null && selected.leggings === null && selected.boots === null) {
+        document.getElementById("save-msg").textContent = "Please select at least one armor piece!";
+        document.getElementById("save-msg").style.color = "#ff6b6b";
+        return;
+      }
+      document.getElementById("save-msg").textContent = "✅ Build saved!";
+      document.getElementById("save-msg").style.color = "#7bed9f";
+    }
+
+    // STEP 6: Initialize — build all 3 slots on page load
+    buildOptions(helmets,  "helmet-options",   "helmet");
+    buildOptions(leggings, "leggings-options", "leggings");
+    buildOptions(boots,    "boots-options",    "boots");
+
+  </script>
+
+</body>
+</html>

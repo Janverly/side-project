@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jack In The Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Jack In The Box</h1>
+
+        <div class="box-wrapper">
+
+            <!-- Surprise -->
+            <img id="surprise" src="assets/img/content.png" alt="Surprise">
+
+            <!-- Box -->
+            <img 
+                id="jackBox"
+                src="assets/img/closed.png"
+                data-closed="assets/img/closed.png"
+                data-open="assets/img/half-open.png"
+                data-state="closed"
+            >
+
+        </div>
+        <button id="toggleBtn">Open the Box</button>
+
+        <audio id="popSound" src="assets/audio/fahhh.mp4"></audio>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff8f0;
+}
+
+h2 {
+    color: #d2691e; 
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(6, 120px); 
+    grid-auto-rows: 120px;
+    gap: 15px; 
+    justify-content: center; 
+}
+
+#game img {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#game img:hover {
+    transform: scale(1.1);
+}

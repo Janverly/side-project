@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schedule Form</title>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+
+    <body>
+
+        <h1>Schedule Appointment</h1>
+
+        <form id="myForm">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" id="email">
+            </div>
+
+            <div class="form-group">
+                <label>Schedule Title:</label>
+                <input type="text" id="title">
+            </div>
+
+            <div class="form-group">
+                <label>Date:</label>
+                <input type="text" id="date">
+            </div>
+
+            <button type="submit">Reserve</button>
+        </form>
+
+        <div id="successDialog" title="Success" style="display:none;">
+            <p id="successText"></p>
+        </div>
+
+        <script src="assets/js/script.js"> </script>
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+I did some cheating on inspecting the main website of Bootstrap, to know what to divide, section something, is this section belong to this, belong to that. I kind of struggling on guessing the sizing of each part of each sections.
+
+It took me almost 1 hour and 30 minutes, I think..?  I also asked ChatGPT for help in naming my classes, and some css suggestions. 
+
+Asking ChatGPT kind of a big help on my side because it also evaluates my html, css. 

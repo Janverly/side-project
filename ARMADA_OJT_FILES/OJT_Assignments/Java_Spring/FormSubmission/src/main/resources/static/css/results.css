@@ -1,0 +1,50 @@
+/* Full page background */
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Result container (glass card) */
+.result-container {
+    background: rgba(255, 255, 255, 0.05);   /* semi-transparent glass */
+    padding: 35px 40px;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);             /* glass blur effect */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 320px;
+    margin: auto;
+}
+
+/* Result message */
+.result-message {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #e2e8f0;
+}
+
+/* Success / Error */
+.success { color: #198754; }
+.error { color: #ef4444; }
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #198754;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    background: #157347;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(25, 135, 84, 0.4);
+}

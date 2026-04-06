@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Card</title>
+</head>
+<body>
+
+    <div id="profileCard">
+        <img id="profileImage" src="https://via.placeholder.com/150">
+        <h2 id="profileName">John Doe</h2>
+        <p id="profileBio">Web developer who loves coffee</p>
+    </div>
+
+    <input type="text" id="nameInput" placeholder="New name">
+    <button onclick="updateName()">Update Name</button>
+
+    <input type="text" id="bioInput" placeholder="New bio">
+    <button onclick="updateBio()">Update Bio</button>
+
+    <input type="text" id="imageInput" placeholder="Image URL">
+    <button onclick="updateImage()">Update Image</button>
+
+    <input type="color" id="bgColorInput">
+    <button onclick="changeBackground()">Change Background</button>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

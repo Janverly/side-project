@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Color Selector</title>
+</head>
+<body>
+
+    <h1>Color Selector</h1>
+    <p>Click a color to change the background of the page.</p>
+
+    <div class="color-group pair">
+        <button class="color-button red" data-color="Red">Red</button>
+        <button class="color-button blue" data-color="Blue">Blue</button>
+    </div>
+
+    <div class="color-group single">
+        <button class="color-button green" data-color="Green">Green</button>
+    </div>
+
+    <div class="color-group pair">
+        <button class="color-button orange" data-color="Orange">Orange</button>
+        <button class="color-button pink" data-color="Pink">Pink</button>
+    </div>
+
+    <div class="color-group single">
+        <button class="color-button yellow" data-color="Yellow">Yellow</button>
+    </div>
+
+    <div id="selected-color">Selected Color: None</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- 
+
+ using event.stopPropagation() so that when I click a button, 
+it doesn’t trigger the container’s click event. Without 
+it, the click on the button would bubble up and make the container 
+think it was clicked too. This way, the button click only does what 
+I want, and the container click only happens when I actually click 
+the container.
+
+-->

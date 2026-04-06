@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Candy Game</title>
+        <link rel="stylesheet" href="candy.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Candy Game</h1>
+            
+        </header>
+
+        <main>
+            <section>
+                <img src="img/candy1.png" alt="Candy 1">
+                <img src="img/candy2.png" alt="Candy 2">
+                <img src="img/candy3.png" alt="Candy 3">
+                <img src="img/candy4.png" alt="Candy 4">
+                <img src="img/candy1.png" alt="Candy 1">
+                <img src="img/candy2.png" alt="Candy 2">
+                <img src="img/candy3.png" alt="Candy 3">
+                <img src="img/candy4.png" alt="Candy 4">
+                <img src="img/candy1.png" alt="Candy 1">
+                <img src="img/candy2.png" alt="Candy 2">
+                <img src="img/candy3.png" alt="Candy 3">
+                <img src="img/candy4.png" alt="Candy 4">
+            </section>
+        </main>
+
+        <section class="reset">
+            <button onclick="location.reload()">Reset Game</button>
+        </section>
+        
+                <script>
+            $(document).ready(function(){
+                $('img').click(function(){
+                    $(this).remove();
+                });
+            });
+        </script>
+    </body>
+</html>

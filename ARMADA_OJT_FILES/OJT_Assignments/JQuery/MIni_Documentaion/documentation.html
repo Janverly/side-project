@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini jQuery Documentation</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="sidebar">
+            <h3>Functions</h3>
+            <a href="#click">click()</a>
+            <a href="#hide">hide()</a>
+            <a href="#show">show()</a>
+            <a href="#toggle">toggle()</a>
+            <a href="#slideDown">slideDown()</a>
+            <a href="#slideUp">slideUp()</a>
+            <a href="#slideToggle">slideToggle()</a>
+            <a href="#fadeIn">fadeIn()</a>
+            <a href="#fadeOut">fadeOut()</a>
+            <a href="#addClass">addClass()</a>
+            <a href="#before">before()</a>
+            <a href="#after">after()</a>
+            <a href="#append">append()</a>
+            <a href="#html">html()</a>
+            <a href="#attr">attr()</a>
+            <a href="#val">val()</a>
+            <a href="#text">text()</a>
+        </div>
+
+        <div class="content">
+
+            <h1>My Mini Documentation</h1>
+
+            
+            <section id="click">
+                <h2>click()</h2>
+                <p>Triggers an action when clicked.</p>
+                <button id="btnClick">Click Me</button>
+            </section>
+
+            
+            <section id="hide">
+                <h2>hide()</h2>
+                <p>Hides an element.</p>
+                <p id="hideText">Hide me</p>
+                <button id="btnHide">Hide</button>
+            </section>
+
+           
+            <section id="show">
+                <h2>show()</h2>
+                <p>Shows hidden elements.</p>
+                <p id="showText" style="display:none;">Now you see me!</p>
+                <button id="btnShow">Show</button>
+            </section>
+
+            
+            <section id="toggle">
+                <h2>toggle()</h2>
+                <p>Toggle visibility.</p>
+                <p id="toggleText">Toggle me</p>
+                <button id="btnToggle">Toggle</button>
+            </section>
+
+            
+            <section id="slideDown">
+                <h2>slideDown()</h2>
+                <p>Slides down an element.</p>
+                <p id="slideDownText" style="display:none;">Sliding down!</p>
+                <button id="btnSlideDown">Slide Down</button>
+            </section>
+
+            
+            <section id="slideUp">
+                <h2>slideUp()</h2>
+                <p>Slides up an element.</p>
+                <p id="slideUpText">Slide me up</p>
+                <button id="btnSlideUp">Slide Up</button>
+            </section>
+
+            
+            <section id="slideToggle">
+                <h2>slideToggle()</h2>
+                <p>Toggle slide.</p>
+                <p id="slideToggleText">Slide toggle me</p>
+                <button id="btnSlideToggle">Slide Toggle</button>
+            </section>
+
+            
+            <section id="fadeIn">
+                <h2>fadeIn()</h2>
+                <p>Fade in element.</p>
+                <p id="fadeInText" style="display:none;">Fading in!</p>
+                <button id="btnFadeIn">Fade In</button>
+            </section>
+
+            
+            <section id="fadeOut">
+                <h2>fadeOut()</h2>
+                <p>Fade out element.</p>
+                <p id="fadeOutText">Fade me out</p>
+                <button id="btnFadeOut">Fade Out</button>
+            </section>
+
+            
+            <section id="addClass">
+                <h2>addClass()</h2>
+                <p>Add CSS class.</p>
+                <p id="classText">Watch me change</p>
+                <button id="btnClass">Add Class</button>
+            </section>
+
+            
+            <section id="before">
+                <h2>before()</h2>
+                <p>Add content before element.</p>
+                <p id="beforeText">Original Text</p>
+                <button id="btnBefore">Add Before</button>
+            </section>
+
+            
+            <section id="after">
+                <h2>after()</h2>
+                <p>Add content after element.</p>
+                <p id="afterText">Original Text</p>
+                <button id="btnAfter">Add After</button>
+            </section>
+
+           
+            <section id="append">
+                <h2>append()</h2>
+                <p>Add inside element.</p>
+                <ul id="list">
+                    <li>Item 1</li>
+                </ul>
+                <button id="btnAppend">Add Item</button>
+            </section>
+
+            
+            <section id="html">
+                <h2>html()</h2>
+                <p>Change HTML content.</p>
+                <p id="htmlText">Old content</p>
+                <button id="btnHtml">Change HTML</button>
+            </section>
+
+            
+            <section id="attr">
+                <h2>attr()</h2>
+                <p>Change attribute.</p>
+                <img id="image" src="img/example.png">
+                <br>
+                <button id="btnAttr">Change Image</button>
+            </section>
+
+            
+            <section id="val">
+                <h2>val()</h2>
+                <p>Get/set input value.</p>
+                <input type="text" id="inputVal" placeholder="Type something">
+                <button id="btnVal">Show Value</button>
+            </section>
+
+           
+            <section id="text">
+                <h2>text()</h2>
+                <p>Change text.</p>
+                <p id="textDemo">Old text</p>
+                <button id="btnText">Change Text</button>
+            </section>
+
+        </div>
+
+        <script>
+        $(document).ready(function(){
+
+            $("#btnClick").click(function(){
+                alert("Button clicked!");
+            });
+
+            $("#btnHide").click(function(){
+                $("#hideText").hide();
+            });
+
+            $("#btnShow").click(function(){
+                $("#showText").show();
+            });
+
+            $("#btnToggle").click(function(){
+                $("#toggleText").toggle();
+            });
+
+            $("#btnSlideDown").click(function(){
+                $("#slideDownText").slideDown();
+            });
+
+            $("#btnSlideUp").click(function(){
+                $("#slideUpText").slideUp();
+            });
+
+            $("#btnSlideToggle").click(function(){
+                $("#slideToggleText").slideToggle();
+            });
+
+            $("#btnFadeIn").click(function(){
+                $("#fadeInText").fadeIn();
+            });
+
+            $("#btnFadeOut").click(function(){
+                $("#fadeOutText").fadeOut();
+            });
+
+            $("#btnClass").click(function(){
+                $("#classText").addClass("highlight");
+            });
+
+            $("#btnBefore").click(function(){
+                $("#beforeText").before("<p>Added before</p>");
+            });
+
+            $("#btnAfter").click(function(){
+                $("#afterText").after("<p>Added after</p>");
+            });
+
+            $("#btnAppend").click(function(){
+                $("#list").append("<li>New Item</li>");
+            });
+
+            $("#btnHtml").click(function(){
+                $("#htmlText").html("<b>New HTML Content</b>");
+            });
+
+            $("#btnAttr").click(function(){
+                $("#image").attr("src", "img/example2.png");
+            });
+
+            $("#btnVal").click(function(){
+                alert($("#inputVal").val());
+            });
+
+            $("#btnText").click(function(){
+                $("#textDemo").text("New text content!");
+            });
+
+        });
+        </script>
+
+    </body>
+</html>

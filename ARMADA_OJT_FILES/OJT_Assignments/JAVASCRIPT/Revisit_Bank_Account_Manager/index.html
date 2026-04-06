@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bank Account App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bank-app">
+        <h2>Bank Account</h2>
+
+        <p>Balance: $<span id="balance">1000</span></p>
+        <p>Daily Withdrawal Used: $<span id="dailyUsed">0</span> / $500</p>
+
+        <input type="number" id="amount" placeholder="Enter amount">
+
+        <div class="buttons">
+            <button id="depositBtn">Deposit</button>
+            <button id="withdrawBtn">Withdraw</button>
+        </div>
+
+        <h3>Transaction History</h3>
+        <ul id="history"></ul>
+    </div>
+
+    <!-- Notification Area -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Candy Flip Game</title>
+    <link rel="stylesheet" href="candy.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+    <body>
+
+        <h2>Simple Candy Flip Game</h2>
+
+        <div id="game">
+            <img src="img/question.png" data-alt-src="img/candy1.png">
+            <img src="img/question.png" data-alt-src="img/candy2.png">
+            <img src="img/question.png" data-alt-src="img/candy3.png">
+            <img src="img/question.png" data-alt-src="img/candy4.png">
+            <img src="img/question.png" data-alt-src="img/candy4.png">
+            <img src="img/question.png" data-alt-src="img/candy3.png">
+            <img src="img/question.png" data-alt-src="img/candy2.png">
+            <img src="img/question.png" data-alt-src="img/candy1.png">
+            <img src="img/question.png" data-alt-src="img/candy2.png">
+            <img src="img/question.png" data-alt-src="img/candy3.png">
+            <img src="img/question.png" data-alt-src="img/candy2.png">
+            <img src="img/question.png" data-alt-src="img/candy3.png">
+        </div>
+
+        <button id="reset">Reset Game</button>
+
+        <script>
+            /*  
+            * DOCU: Implements a simple candy flip functionality for a memory game.
+            *       When an image is clicked, it toggles between the default image 
+            *       ('question.png') and the actual candy image stored in the 'data-alt-src' attribute.
+            *       Includes a reset button that restores all images to the default (question.png).
+            * 
+            * @param {object} $img - The jQuery object of the clicked <img> element.
+            * @param {string} altSrc - The candy image path stored in the 'data-alt-src' attribute.
+            * @param {string} currentSrc - The current 'src' of the clicked image.
+            *
+            * Last Updated: 2026-03-24  
+            * Author: Janverly  
+            * Last Updated By: Janverly  
+            */
+        $(document).ready(function(){
+            $("#game img").click(function(){
+                const $img = $(this);                                                                                /* need this so when i clicked the image it will convert it so that i can use jQuery*/
+                const altSrc = $img.attr("data-alt-src");
+                const currentSrc = $img.attr("src");
+
+                $img.attr("src", currentSrc === "img/question.png" ? altSrc : "img/question.png");
+                
+                /* looged on the console inspect*/
+                console.log('data-alt-src value is', altSrc);
+            });
+
+            $("#reset").click(function(){
+                $("#game img").attr("src", "img/question.png");
+            });
+        });
+        </script>
+
+    </body>
+</html>

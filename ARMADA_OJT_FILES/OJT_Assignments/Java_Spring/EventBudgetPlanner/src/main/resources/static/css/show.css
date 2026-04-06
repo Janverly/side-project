@@ -1,0 +1,49 @@
+/* DETAILS PAGE */
+
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+section {
+    width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    color: #333;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-back {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.btn-back:hover {
+    background-color: #2980b9;
+}

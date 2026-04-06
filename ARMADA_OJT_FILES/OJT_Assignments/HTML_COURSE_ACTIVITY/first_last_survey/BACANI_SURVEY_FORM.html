@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+</head>
+<body>
+
+    <h1>Survey Form</h1>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>User Information</legend>
+
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>How satisfied are you with our service?</legend>
+
+            <label>
+                <input type="radio" name="satisfaction" value="very_satisfied" required>
+                Very Satisfied
+            </label><br>
+
+            <label>
+                <input type="radio" name="satisfaction" value="satisfied">
+                Satisfied
+            </label><br>
+
+            <label>
+                <input type="radio" name="satisfaction" value="neutral">
+                Neutral
+            </label><br>
+
+            <label>
+                <input type="radio" name="satisfaction" value="dissatisfied">
+                Dissatisfied
+            </label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>What features do you value most?</legend>
+
+            <label>
+                <input type="checkbox" name="features" value="usability">
+                Ease of Use
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="features" value="performance">
+                Performance
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="features" value="support">
+                Customer Support
+            </label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>User Role</legend>
+
+            <label for="role">What best describes you?</label><br>
+            <select id="role" name="role">
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="hobbyist">Hobbyist</option>
+                <option value="other">Other</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Additional feedback</legend>
+
+            <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Submit Survey</button>
+
+    </form>
+
+</body>
+</html>
+
+
+
+<!-- Compress your survey_form.html file into a .zip folder named first_last_survey.zip.
+Submit the .zip file along with a comment on how long it took you to complete the task.
+Reflect on any challenges or areas of confusion and how you resolved them.
+
+It took me almost an hour and 30 minutes (approximately) to complete the task.
+
+I did some research on how to use the Fieldset and Legend tags properly since I somehow saw the tags on some articles.
+
+I also watch some tutotials on how to create a simple survey form for some inspiration and I kinda did inspect on how they did it.
+
+I kinda face challenges on visualizing the form structure in my mind but after breaking down the requirements, I was able to put everything together step by step.
+First I did some "div" then i replaced them with the proper semantic tags like ""fieldset" and "legend" which I learned from my research.
+
+
+
+
+-->

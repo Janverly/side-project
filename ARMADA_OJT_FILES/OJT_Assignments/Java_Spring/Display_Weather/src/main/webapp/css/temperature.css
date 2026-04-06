@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.temperature-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 20px 30px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.temperature-container:hover {
+    transform: scale(1.05);
+}
+
+.temperature-img {
+    width: 80px;
+    height: auto;
+}
+
+.temperature-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff4500;
+}

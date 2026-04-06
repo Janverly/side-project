@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pacman Demo</title>
+</head>
+
+<body>
+    <!-- The background of the game -->
+    <div id="background">
+        <!-- The character element which will be moved -->
+        <div id="character"
+            style='position: absolute; top: 200px; left: 450px; background-image: url("./img/ghost-left1.webp"); height: 100px; width: 100px;'>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var leftValue = 450;
+        var topValue = 200;
+        var direction = "ghost-left";
+        var walkValue = 1;
+
+        function moveGhost() {
+
+            // toggle walk animation
+            if (walkValue == 1) {
+                walkValue = 2;
+            } else {
+                walkValue = 1;
+            }
+
+            var character = document.getElementById("character");
+
+            character.style.left = leftValue + "px";
+            character.style.top = topValue + "px";
+            character.style.backgroundImage = "url('./img/" + direction  + walkValue+ ".webp')"; //just removed the 1 then replace with walkValue
+        }
+
+        document.onkeydown = function (e) {
+
+            if (e.keyCode == 37 && leftValue > 0) { // LEFT
+                leftValue = leftValue - 10;
+                direction = "ghost-left";
+            }
+            else if (e.keyCode == 39 && leftValue < 500) { // RIGHT
+                leftValue = leftValue + 10;
+                direction = "ghost-right";
+            }
+            else if (e.keyCode == 40 && topValue < 500) { // DOWN
+                topValue = topValue + 10;
+                direction = "ghost-down";
+            }
+            else if (e.keyCode == 38 && topValue > 0) { // UP
+                topValue = topValue -10;
+                direction = "ghost-up";
+            }
+
+            moveGhost();
+        };
+    </script>
+</body>
+
+</html>

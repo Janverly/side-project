@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(to bottom, #1a1a1a, #330000); /* dark pirate vibe */
+    color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Heading */
+h1 {
+    font-size: 3em;
+    color: #ff4d4d; /* red for danger */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Link styling */
+a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff9933; /* treasure/gold vibe */
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #000;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #ffcc66;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px #000;
+}

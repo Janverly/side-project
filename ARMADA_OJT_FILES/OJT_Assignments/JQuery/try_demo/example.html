@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- parent  si div-->
+    <div>
+    <h3>Recommended Language for Newbies</h3>
+     <!--sibling ni h3 si ul-->
+    <ul>
+        <!-- children ni ul si li at span -->
+        <li>Web Front-end: <span></span></li>
+        <li>Web Back-end: <span></span></li>
+        <li>Mobile: <span></span></li>
+        <li>Games: <span></span></li>
+        <li>AI: <span></span></li>
+    </ul>
+    <button>Click me to reveal!</button>
+ </div>
+
+ <script>
+        $(document).ready( function() {
+        $('h3').click( function() {
+            alert('Claim it!');
+        });
+    $('button').click(function(){
+     $(this).siblings().children().children().text('Javascript');
+ })
+})
+ </script>
+</body>
+</html>

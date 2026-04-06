@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F6C9;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #3E4A3F;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #7FBF9F;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #4F6F52;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #E8F3EC;
+}
+
+a {
+    text-decoration: none;
+    color: #7FBF9F;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #4F6F52;
+}
+
+.delete-link {
+    color: #b00020;
+}
+
+.delete-link:hover {
+    color: #ff4d4d;
+}
+
+label {
+    font-weight: bold;
+    color: #3E4A3F;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #7FBF9F;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #4F6F52;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3E4A3F;
+}
+
+.error {
+    color: #b00020;
+    font-size: 12px;
+}

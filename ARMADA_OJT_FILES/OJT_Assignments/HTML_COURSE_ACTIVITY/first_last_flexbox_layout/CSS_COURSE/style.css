@@ -1,0 +1,44 @@
+body {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* stack header + content + footer vertically */
+}
+
+header {
+  background-color: #ffcc00;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+aside, section {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* if walang inline-block we could use if may class:
+.content {
+  display: flex;
+  gap: 20px; depends sa space between nung dalawa
+}
+*/
+
+aside {
+  background-color: #9b59b6;
+  width: 300px;
+  height: 300px;
+  padding: 0 19px 0 0;
+}
+
+section {
+  background-color: #1abc9c;
+  width: 876px;
+  height: 300px;
+}
+
+
+footer {
+  background-color: #e74c3c;
+  height: 100px;
+  margin-top: 20px;
+}

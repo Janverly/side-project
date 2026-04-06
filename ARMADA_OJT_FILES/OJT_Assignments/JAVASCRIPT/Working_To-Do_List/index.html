@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Working To-Do List</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>To-Do List</h2>
+         
+        <form id="taskForm" onsubmit="addTask(event)">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <ul id="taskList"></ul>
+
+       <div id="notificationContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

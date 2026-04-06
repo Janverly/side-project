@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: dodgerblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+/* letters */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* rounded edge */
+.left-panel .box {
+  background-color: lightcoral;
+  border-radius: 5px;
+  padding: 30px 120px 30px 120px;
+  text-align: center;
+}
+
+/* 1,2,3,4 */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* for rounded edge sa box */
+.right-panel .box {
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* box 1,2 maint-content,3,4 */
+.top-bar,
+.main-content {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  background-color: lightcoral;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(255, 109, 30);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,0 +1,53 @@
+.background {
+    position: fixed;   /* stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;        
+}
+
+.firefly {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2; 
+}
+
+.firefly.shrink {
+    transform: scale(0);
+    opacity: 0;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 59px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+    text-shadow: 3px 3px 0 #000, 6px 6px 0 #555; /* pixelated Minecraft shadow effect */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;   
+    }
+
+    .firefly {
+        width: 70px; 
+}
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;   
+    }
+
+    .firefly {
+        width: 70px;      
+    }
+}

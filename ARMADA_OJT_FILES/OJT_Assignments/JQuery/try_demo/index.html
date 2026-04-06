@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+  <!-- <script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            $('#new').append('<li>I am dynamic content!</li>');
+        });
+        $('ul').on('mouseover', 'li', function(){ 
+            $(this).css('color', 'red');
+        });
+    });
+</script>
+<body>
+    <button>Click me</button>
+    <ul id="old">
+        <li>I am static content 1</li>
+        <li>I am static content 2</li>
+    </ul>
+    <ul id="new"></ul>
+</body> -->
+    <!-- <script src="script.js"> </script> -->
+<!-- <script>
+    $(document).ready( function() {
+        $('h3').click(function() { alert("Claim it!"); });
+    });
+</script>
+<body>
+        <h3>Affirmation of the Day:</h3>
+</body> -->
+<!-- <body>
+<script>
+    $(document).ready(
+        function() {
+            $('h3').click(
+                function() {
+                    alert('Claim it!');
+                }
+            );
+            $('button').click(
+                function() {
+                    $('body').append('<h3>Each day I am getting closer to be hirable developer.</h3>');
+                }
+            );
+        }
+    );
+</script>
+
+       
+        <h3>Affirmation of the Day:</h3>
+
+        <button>Click to reveal</button>
+</body> -->
+
+<script>
+    $(document).ready( function() {
+        $('h3').click( function() {
+            alert('Claim it!');
+        });
+        $('button').click( function() {
+            $('body').append('<h3>Each day I am getting closer to be hirable developer.</h3>');
+            $('h3').click( function() {
+                alert('Claim it!');   //This is the callback that executes only every time the button is clicked!
+            });
+        });
+    });
+</script>
+<body>
+        <button>Click to reveal</button>
+        <h3>Affirmation of the Day:</h3>
+</body>
+</html>

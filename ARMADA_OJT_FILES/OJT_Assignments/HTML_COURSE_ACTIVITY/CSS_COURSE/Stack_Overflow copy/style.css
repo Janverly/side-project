@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* para magkatabi si aside ken homepage */
+main{
+    display: flex;
+    align-items: flex-start;
+}
+
+nav {
+    border-top: #d05b17 solid 4px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d6d9dc;
+}
+
+header nav  {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+nav a img{
+    height: 35px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+nav ul li .intro-visit{
+    background-color: transparent;
+    border: #0a95ff 1px solid;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #161717;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-search{
+    flex: 1;
+}
+
+.search-form{
+    width: 100%;
+}
+
+.search-input{
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #babfc4;
+    border-radius: 4px; 
+    font-size: 14px;
+}
+
+.primary-navigation{
+    width: 220px;
+    min-height: 100vh;
+    border-right: 1px solid #d6d9dc;
+    padding: 20px 10px;
+}
+
+.navigation-group{
+    margin-bottom: 20px;
+}
+
+.navigation-heading{
+    font-size: 12px;
+    font-weight: bold;
+    color: #6a737c;
+    text-transform: uppercase;
+    margin: 10px 10px 5px;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation-group ul li{
+    margin-bottom: 5px;
+}
+
+.navigation-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #161717;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.navigation-icon{
+    width: 18px;
+    height: 18px;
+}
+
+.homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 50px;
+    gap: 6px;
+}
+
+
+img#background-text {
+    position: absolute;
+    width: 160px;
+    left: 238px;
+    height: auto;
+    z-index: -1;
+}
+
+.highlight {
+    color: white;
+}
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.intro-text {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25x; 
+    z-index: 2;
+}
+
+.intro-act img{
+    width: 400px;
+    height: auto;
+}
+
+.intro-text p{
+    font-size: 160px;
+    color: #3b4045;
+    line-height: 1.6;
+}
+
+.intro-text h2{
+    font-size: 30px;
+}
+.intro-text p {
+    font-size: 16px;
+    color: #3b4045;
+    line-height: 1.6;
+}
+
+.intro-actions {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.intro-signup, .intro-visit{
+    display: inline-block;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #0a95ff;
+}
+
+.intro-content ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    gap: 15px;
+}
+
+.intro-act{
+    list-style: none;
+}
+
+.intro-signup{
+    color: #f1f1f1;
+    background-color: #0a95ff;
+}
+
+.teams-section, .api-section, .careers-section{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    padding: 20px 50px;
+    background-color: #f9f9f9;
+    gap: 12px;
+}
+
+.teams-section > p , .api-section > p , .careers-section > p{
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0a0a0a;
+    margin-bottom: 5px;
+}
+
+.content1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    height: 400px;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.teams-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.teams-content p {
+    font-size: 16px;
+    color: #3b4045;
+    line-height: 1.6;
+}
+
+.teams-content ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.teams-content ul li a {
+    padding: 10px 18px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.navbar-logo img{
+    width: 200px;
+    height: 35px;
+}
+
+.content1-explore {
+    background-color: #0a95ff;
+    color: #ffffff;
+}
+
+.content1-free {
+    text-decoration: underline;
+    color: #0a95ff;
+}
+
+.content1 img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ai-section{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #2f3131;
+}
+
+.ai-section .quote {
+    font-weight: bold;  
+    font-size: 18px;   
+}
+
+.ai-section .section-text p {
+    color: #f1f1f1f1;   
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ai-section .section-image{
+    margin-top: auto;
+}
+.ai-section .section-image img{
+    width: 100%;
+    display: block;
+}
+
+.highlight-btn {
+    background-color: orange;   
+    font-weight: bold;   
+    text-decoration: none; 
+}
+
+.content2{
+    background-color: #161717;
+}
+
+.api-section .content1 {
+    display: flex;                
+    align-items: center;
+    justify-content: space-between; 
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    flex-wrap: wrap;               
+}
+
+.api-section .section-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.api-section .section-text p {
+    font-size: 16px;
+    color: #3b4045;
+    line-height: 1.6;
+}
+
+.api-section .section-text ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.api-section .section-text ul li a {
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.api-section .content1-free {
+    text-decoration: underline;
+    color: #0a95ff;
+}
+
+.api-section .section-image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section-image {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    max-width: 500px;
+}
+
+.section-image .image-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px; 
+    border-radius: 8px; 
+}
+
+.section-image .image-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3b4045;
+}
+
+.section-image .image-text ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.section-image .image-text ul li a {
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.section-image .image-text .content1-free {
+    color: #0a95ff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+
+    /* Navbar */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-search {
+        width: 100%;
+    }
+
+    /* Sidebar */
+    .primary-navigation {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    /* Homepage */
+    .homepage {
+        padding: 40px 20px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro-act img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .intro-text h2 {
+        font-size: 22px;
+    }
+
+    .intro-text p {
+        font-size: 14px;
+    }
+
+    /* Sections */
+    .content1 {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+
+    .content1 img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .teams-section,
+    .api-section,
+    .careers-section {
+        padding: 20px;
+    }
+    img#background-text{
+        width: 110px;
+        left: 180px;
+        top: 69px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+
+    /* Sidebar becomes thinner */
+    .primary-navigation {
+        width: 180px;
+    }
+
+    /* Homepage */
+    .homepage {
+        padding: 60px 30px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-act img {
+        width: 350px;
+    }
+
+    /* Sections */
+    .content1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content1 img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    main {
+        flex-direction: row;
+    }
+
+    .primary-navigation {
+        display: block;
+        width: 220px;
+    }
+
+    .intro-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .content1 {
+        flex-direction: row;
+    }
+}
